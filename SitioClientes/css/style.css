@@ -1,0 +1,335 @@
+﻿:root {
+    --azul-claro: #457B9D;
+    --azul-oscuro: #1D3557;
+    --verde-agua: #A8DADC;
+    --blanco: #F1FAEE;
+    --rojo: #E63946;
+}
+
+body {
+    background-color: #d0e2e1;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+.color-titulo {
+    color: var(--blanco);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-size {
+    height: 24px;
+}
+
+.div-image-user {
+    float: left;
+    width: 15%;
+    height: 36px;
+}
+
+.img-login {
+    padding-top: 5px;
+}
+
+.maring-top-sm {
+    margin-top: 15px;
+}
+
+.maring-top-md {
+    margin-top: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+#container-login {
+    width: 30%;
+    margin: auto;
+    height: auto;
+    background-color: var(--verde-agua);
+    margin-top: 50px;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 0px 0px 5px 1px;
+}
+
+    #container-login input {
+        height: 30px;
+    }
+
+#tblTipoTramites{
+    width: 95%;
+}
+#tblRptTipoTramites {
+    width: 100%;
+}
+
+#tblRptTipoTramites input{
+    width: 105px;
+}
+
+#tblRptTipoTramites tr td{
+    margin-top: 5px;
+    height: 45px;
+    border-bottom: 1px solid black;
+}
+
+select {
+    height: 25px;
+}
+
+.input-user-login {
+    width: 83%;
+}
+
+.ctr-user {
+    margin-top: 25%;
+}
+
+.text-blue {
+    color: var(--azul-oscuro);
+}
+
+.margin-left-sm {
+    margin-left: 5%;
+}
+
+.margin-top-xs {
+    margin-top: 2%;
+}
+
+.margin-top-sm {
+    margin-top: 5%;
+}
+
+.margin-bottom-sm{
+    margin-bottom: 5%;
+}
+
+.margin-bottom-xs {
+    margin-bottom: 2%;
+}
+
+.lnk {
+    width: 135px !important;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.text-align-left{
+    text-align: left;
+}
+
+.solicitudTramite .img-menu {
+    padding-top: 0px !important;
+    padding-left: 23px !important;
+}
+#ctr-user-password {
+    margin-top: 25px;
+}
+
+#titulo-login {
+    height: 80px;
+    width: 100%;
+    background-color: var(--azul-oscuro);
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 3px 4px;
+}
+
+#titulo-tramites {
+    padding-top: 25px;
+}
+
+#tableControls-login {
+    width: 50%;
+    margin: auto;
+}
+
+    #tableControls-login tbody tr td {
+        background-color: var(--verde-agua) !important;
+    }
+
+#ctr-register {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.btnIngreso,
+.btnRegistro {
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--azul-claro);
+    border: 0px;
+    color: var(--blanco);
+    box-shadow: 0px 0px 0px 1px var(--azul-oscuro);
+    border-radius: 2px;
+}
+
+    .btnIngreso:hover,
+    .btnRegistro:hover {
+        background-color: var(--azul-oscuro);
+        -webkit-transition: background-color 500ms linear;
+        -ms-transition: background-color 500ms linear;
+        transition: background-color 500ms linear;
+        cursor: pointer;
+    }
+
+#footer {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    text-align: center;
+    color: var(--azul-oscuro);
+}
+
+.description-login {
+    position: absolute;
+    padding-top: 35px;
+    left: 49%;
+    color: var(--azul-oscuro);
+}
+
+.ddlTipoTramite{
+    width : 182px;
+}
+
+.lblDocRequeridos{
+    color: blue;
+}
+
+#tblSolicitud {
+    position: relative;
+    display: block;
+    height: auto !important;
+    width: 70% !important;    
+}
+
+    #tblSolicitud tbody tr td:first-child {
+        width: 150px;
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    #tblSolicitud tbody tr td:last-child {
+        width: 100%;
+    }
+
+#hlMiPerfil {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    top: 15px;
+}
+
+    #hlMiPerfil img {
+        width: 25px;
+        padding: 5px;
+        border: 2px var(--azul-oscuro) solid;
+    }
+
+        #hlMiPerfil img:hover {
+            cursor: pointer;
+            border: 2px var(--azul-claro) solid;
+        }
+
+#menuProfile {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    top: 35px;
+    text-align: right;
+    list-style-type: none;
+    width: 200px;
+    padding-left: 0px;
+    background-color: var(--azul-claro);
+    display: none;
+}
+
+    #menuProfile li a,
+    #menuProfile li span {
+        display: block;
+        color: var(--blanco);
+        padding: 8px 16px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    #menuProfile li span {        
+        font-weight: 700;
+    }
+
+    #menuProfile li:not(#nameSolicitante):hover {
+        background-color: var(--azul-oscuro);
+    }
+
+.btn {
+    height: 30px;
+    float: right;
+    background-color: var(--azul-claro);
+    border: none;
+    width: 90px;
+    color: var(--blanco);
+}
+
+    .btn:hover {
+        background-color: var(--azul-oscuro);
+    }
+
+@media screen and (max-width: 768px) {
+    #container-login {
+        width: 80% !important;
+    }
+
+    #tableControls-login {
+        width: 60%;
+        padding-top: 25px;
+    }
+
+    #description-login {
+        left: 28%;
+        max-width: 45%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #container-login {
+        width: 60% !important;
+    }
+
+    #tableControls-login {
+        width: 55%;
+        padding-top: 25px;
+    }
+
+    #description-login {
+        left: 37%;
+        max-width: 25%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #container-login {
+        width: 55% !important;
+    }
+
+    #tableControls-login {
+        padding-top: 25px;
+        width: 66%;
+    }
+
+    #description-login {
+        left: 41%;
+        max-width: 20%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #container-login {
+        width: 35% !important;
+    }
+}

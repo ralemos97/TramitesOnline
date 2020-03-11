@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MPSolicitantes.master.cs" Inherits="MPSolicitantes" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Tramites Online | Bienvenido</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <div id="containerMenu">
+        <form id="frmMenuTramitesOnline" runat="server">
+            <table id="tableMenu" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td  style="height: 100%;">
+                            <div id="menu">
+                                <div id="opInicio">
+                                    <img class="img-inicio" src="img/inicio.png" />
+                                    <asp:HyperLink ID="hlInicio" runat="server" NavigateUrl="~/Bienvenida.aspx">Inicio</asp:HyperLink>
+                                </div>
+                                
+                                <asp:HyperLink ID="hlLogin" CssClass="opMenuLink" runat="server" NavigateUrl="~/Login.aspx"  onmouseover="menu.changeStyleOptionMenu('login', true)" onmouseout="menu.changeStyleOptionMenu('login', false)">
+                                    <img id="login" class="img-menu" src="img/account-login-black.png" />
+                                    <img id="loginWhite" class="img-menu hidden" src="img/account-login-white.png" />
+                                    Iniciar sesión
+                                </asp:HyperLink>
+
+                                <asp:HyperLink ID="hlRegistro" CssClass="opMenuLink" runat="server" NavigateUrl="~/Registro.aspx" onmouseover="menu.changeStyleOptionMenu('registro', true)" onmouseout="menu.changeStyleOptionMenu('registro', false)">
+                                    <img id="registro" class="img-menu" src="img/add-user-black.png" />
+                                    <img id="registroWhite" class="img-menu hidden" src="img/add-user-white.png" />
+                                    Registrarme
+                                </asp:HyperLink>
+
+                                <asp:HyperLink ID="hlConsultaSolicitudes" CssClass="opMenuLink" runat="server" NavigateUrl="~/Consultas.aspx" onmouseover="menu.changeStyleOptionMenu('consulta', true)" onmouseout="menu.changeStyleOptionMenu('consulta', false)">
+                                    <img id="consulta" class="img-menu" src="img/document-black.png" />
+                                    <img id="consultaWhite" class="img-menu hidden" src="img/document-white.png" />
+                                        Consulta de tipo tramites
+                                </asp:HyperLink>
+
+                                <asp:HyperLink ID="hlSolicitud" CssClass="opMenuLink solicitudTramite" runat="server" NavigateUrl="~/Solicitud.aspx" Visible="False" onmouseover="menu.changeStyleOptionMenu('solicitud', true)" onmouseout="menu.changeStyleOptionMenu('solicitud', false)">
+                                    <img id="solicitud" class="img-menu" src="img/plus-black.png" />
+                                    <img id="solicitudWhite" class="img-menu hidden" src="img/plus-white.png" />
+                                    Solicitud Tramite
+                                </asp:HyperLink>
+
+                            </div>
+                            <span id="copyright">&copy; Instituto BIOS | Tramites Online</span>
+                        </td>
+                        <td>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <asp:HyperLink ID="hlMiPerfil" runat="server" Visible="False">
+                <img  src="img/profile-black.png" onclick="menu.showMenuProfile(this)"/>
+            </asp:HyperLink>
+
+            <ul id="menuProfile" onmouseout="menu.showMenuProfile(this)">
+                <li id="nameSolicitante">
+                    <asp:Label ID="lblName" runat="server" Text=""></asp:Label>                    
+                </li>
+                <li>
+                    <asp:LinkButton ID="btnCerrarSesion" runat="server" OnClick="btnCerrarSesion_Click">Cerrar Sesion</asp:LinkButton>
+                </li>
+            </ul>
+
+            <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+        </form>
+    </div>
+    <script src="scripts/menu.js"></script>
+</body>
+</html>

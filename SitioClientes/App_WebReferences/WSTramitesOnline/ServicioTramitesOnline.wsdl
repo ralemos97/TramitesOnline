@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioTramitesOnline" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ServicioTramites/ServicioTramitesOnline.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/ServicioTramites/ServicioTramitesOnline.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ServicioTramites/ServicioTramitesOnline.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioTramitesOnline_Registro_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registro" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_Registro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ModificarDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ModificarDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_EliminarDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_EliminarDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_BuscarDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_BuscarDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ObtenerDocumentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ObtenerDocumentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ModificarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ModificarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_EliminarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_EliminarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_BuscarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_BuscarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarHoraExtra_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarHoraExtra" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarHoraExtra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarHoraExtraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_CambiarEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_CambiarEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ListadoSolicitudes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoSolicitudes" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ListadoSolicitudes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoSolicitudesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarTramite_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarTramite" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_AgregarTramite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarTramiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ModificarTramite_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarTramite" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ModificarTramite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarTramiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_EliminarTramite_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTramite" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_EliminarTramite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTramiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ObtenerTramites_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTramites" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ObtenerTramites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTramitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ObtenerTipoTramites_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoTramites" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_ObtenerTipoTramites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoTramitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_BuscarTramite_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTramite" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTramitesOnline_BuscarTramite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTramiteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioTramitesOnline">
+    <wsdl:operation name="Registro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/Registro" message="tns:IServicioTramitesOnline_Registro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/RegistroResponse" message="tns:IServicioTramitesOnline_Registro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/Login" message="tns:IServicioTramitesOnline_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/LoginResponse" message="tns:IServicioTramitesOnline_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarDocumento" message="tns:IServicioTramitesOnline_AgregarDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarDocumentoResponse" message="tns:IServicioTramitesOnline_AgregarDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ModificarDocumento" message="tns:IServicioTramitesOnline_ModificarDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ModificarDocumentoResponse" message="tns:IServicioTramitesOnline_ModificarDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/EliminarDocumento" message="tns:IServicioTramitesOnline_EliminarDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/EliminarDocumentoResponse" message="tns:IServicioTramitesOnline_EliminarDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/BuscarDocumento" message="tns:IServicioTramitesOnline_BuscarDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/BuscarDocumentoResponse" message="tns:IServicioTramitesOnline_BuscarDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ObtenerDocumentos" message="tns:IServicioTramitesOnline_ObtenerDocumentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ObtenerDocumentosResponse" message="tns:IServicioTramitesOnline_ObtenerDocumentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarEmpleado" message="tns:IServicioTramitesOnline_AgregarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarEmpleadoResponse" message="tns:IServicioTramitesOnline_AgregarEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ModificarEmpleado" message="tns:IServicioTramitesOnline_ModificarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ModificarEmpleadoResponse" message="tns:IServicioTramitesOnline_ModificarEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/EliminarEmpleado" message="tns:IServicioTramitesOnline_EliminarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/EliminarEmpleadoResponse" message="tns:IServicioTramitesOnline_EliminarEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/BuscarEmpleado" message="tns:IServicioTramitesOnline_BuscarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/BuscarEmpleadoResponse" message="tns:IServicioTramitesOnline_BuscarEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarHoraExtra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarHoraExtra" message="tns:IServicioTramitesOnline_AgregarHoraExtra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarHoraExtraResponse" message="tns:IServicioTramitesOnline_AgregarHoraExtra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarSolicitud" message="tns:IServicioTramitesOnline_AgregarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarSolicitudResponse" message="tns:IServicioTramitesOnline_AgregarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/CambiarEstado" message="tns:IServicioTramitesOnline_CambiarEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/CambiarEstadoResponse" message="tns:IServicioTramitesOnline_CambiarEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListadoSolicitudes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ListadoSolicitudes" message="tns:IServicioTramitesOnline_ListadoSolicitudes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ListadoSolicitudesResponse" message="tns:IServicioTramitesOnline_ListadoSolicitudes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarTramite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarTramite" message="tns:IServicioTramitesOnline_AgregarTramite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/AgregarTramiteResponse" message="tns:IServicioTramitesOnline_AgregarTramite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarTramite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ModificarTramite" message="tns:IServicioTramitesOnline_ModificarTramite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ModificarTramiteResponse" message="tns:IServicioTramitesOnline_ModificarTramite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTramite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/EliminarTramite" message="tns:IServicioTramitesOnline_EliminarTramite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/EliminarTramiteResponse" message="tns:IServicioTramitesOnline_EliminarTramite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTramites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ObtenerTramites" message="tns:IServicioTramitesOnline_ObtenerTramites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ObtenerTramitesResponse" message="tns:IServicioTramitesOnline_ObtenerTramites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoTramites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ObtenerTipoTramites" message="tns:IServicioTramitesOnline_ObtenerTipoTramites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/ObtenerTipoTramitesResponse" message="tns:IServicioTramitesOnline_ObtenerTipoTramites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTramite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTramitesOnline/BuscarTramite" message="tns:IServicioTramitesOnline_BuscarTramite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTramitesOnline/BuscarTramiteResponse" message="tns:IServicioTramitesOnline_BuscarTramite_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioTramitesOnline" type="tns:IServicioTramitesOnline">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Registro">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/Registro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDocumento">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/AgregarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDocumento">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/ModificarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocumento">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/EliminarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDocumento">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/BuscarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentos">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/ObtenerDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/AgregarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/ModificarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/EliminarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/BuscarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarHoraExtra">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/AgregarHoraExtra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/AgregarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstado">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/CambiarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListadoSolicitudes">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/ListadoSolicitudes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarTramite">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/AgregarTramite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarTramite">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/ModificarTramite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTramite">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/EliminarTramite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTramites">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/ObtenerTramites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoTramites">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/ObtenerTipoTramites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTramite">
+      <soap:operation soapAction="http://tempuri.org/IServicioTramitesOnline/BuscarTramite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioTramitesOnline">
+    <wsdl:port name="BasicHttpBinding_IServicioTramitesOnline" binding="tns:BasicHttpBinding_IServicioTramitesOnline">
+      <soap:address location="http://localhost/ServicioTramites/ServicioTramitesOnline.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
